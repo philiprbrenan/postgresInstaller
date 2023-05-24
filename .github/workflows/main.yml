@@ -1,4 +1,4 @@
-# Test 2023-05-25 at 00:20:50
+# Test 2023-05-25 at 00:22:52
 
 name: Test
 
@@ -6,7 +6,7 @@ on:
   push
 
 jobs:
-  test:
+  Ubuntu:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
       run: |
         wget https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe
 
-  test:
+  windows:
     runs-on: windows-latest
 
     steps:
