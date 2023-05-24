@@ -1,0 +1,18 @@
+# Test 2023-05-25 at 00:09:46
+
+name: Test
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+
+    - name: Download Postgres
+      run: |
+        wget https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe
