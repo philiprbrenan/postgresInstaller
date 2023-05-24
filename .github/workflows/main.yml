@@ -1,4 +1,4 @@
-# Test 2023-05-25 at 00:09:46
+# Test 2023-05-25 at 00:11:07
 
 name: Test
 
@@ -11,7 +11,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
 
     - name: Download Postgres
       run: |
