@@ -1,4 +1,4 @@
-# Test 2023-05-25 at 00:43:37
+# Test 2023-05-25 at 00:45:46
 
 name: Test
 
@@ -27,4 +27,7 @@ jobs:
         curl https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe -o postgres.exe
         dir postgres.exe
         .\postgres.exe --help
+
+    - name: Install Postgres
+      run: |
         .\postgres.exe --unattendedmodeui minimal --mode unattended --servicename "postgres" --superpassword "111111"
