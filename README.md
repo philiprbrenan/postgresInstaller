@@ -3,22 +3,93 @@
 The action for this repository demonstrates how to download the Windows installer from the command line:
 
 ```
-Run curl https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe > postgres.exe
+curl https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe -o postgres.exe
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  5  320M    5 18.6M    0     0  16.3M      0  0:00:19  0:00:01  0:00:18 16.3M
- 14  320M   14 46.6M    0     0  22.0M      0  0:00:14  0:00:02  0:00:12 22.0M
- 23  320M   23 74.6M    0     0  23.9M      0  0:00:13  0:00:03  0:00:10 23.9M
- 34  320M   34  111M    0     0  25.3M      0  0:00:12  0:00:04  0:00:08 25.3M
- 43  320M   43  139M    0     0  25.9M      0  0:00:12  0:00:05  0:00:07 26.7M
- 52  320M   52  167M    0     0  26.6M      0  0:00:12  0:00:06  0:00:06 28.9M
- 60  320M   60  195M    0     0  27.1M      0  0:00:11  0:00:07  0:00:04 29.2M
- 69  320M   69  223M    0     0  27.1M      0  0:00:11  0:00:08  0:00:03 29.0M
- 78  320M   78  251M    0     0  27.3M      0  0:00:11  0:00:09  0:00:02 29.2M
- 89  320M   89  288M    0     0  27.7M      0  0:00:11  0:00:10  0:00:01 29.7M
- 98  320M   98  316M    0     0  28.0M      0  0:00:11  0:00:11 --:--:-- 29.8M
-100  320M  100  320M    0     0  28.0M      0  0:00:11  0:00:11 --:--:-- 29.5M
+ 22  320M   22 72.8M    0     0   155M      0  0:00:02 --:--:--  0:00:02  155M
+100  320M  100  320M    0     0   261M      0  0:00:01  0:00:01 --:--:--  261M
+
+    Directory: D:\a\postgresInstaller\postgresInstaller
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           5/24/2023 11:44 PM      336432992 postgres.exe
+
+PostgreSQL 15
+Usage:
+
+ --help                                      Display the list of valid options
+
+ --version                                   Display product information
+
+ --unattendedmodeui <unattendedmodeui>       Unattended Mode UI
+                                             Default: minimal
+                                             Allowed: none minimal minimalWithDialogs
+
+ --optionfile <optionfile>                   Installation option file
+                                             Default: 
+
+ --debuglevel <debuglevel>                   Debug information level of verbosity
+                                             Default: 2
+                                             Allowed: 0 1 2 3 4
+
+ --mode <mode>                               Installation mode
+                                             Default: qt
+                                             Allowed: qt win32 unattended
+
+ --debugtrace <debugtrace>                   Debug filename
+                                             Default: 
+
+ --enable-components <enable-components>     Comma-separated list of components
+                                             Default: server,pgAdmin,stackbuilder,commandlinetools
+                                             Allowed: server pgAdmin stackbuilder commandlinetools
+
+ --disable-components <disable-components>   Comma-separated list of components
+                                             Default: 
+                                             Allowed: server pgAdmin stackbuilder commandlinetools
+
+ --installer-language <installer-language>   Language selection
+                                             Default: en
+                                             Allowed: en es fr
+
+ --extract-only <extract-only>               
+                                             Default: 0
+
+ --superaccount <superaccount>               Sets the user name of the database superuser. Defaults to 'postgres'.
+                                             Default: postgres
+
+ --servicename <servicename>                 Sets the name of the database service.
+                                             Default: 
+
+ --serviceaccount <serviceaccount>           Sets the operating system user account that owns the server process. Defaults to 'postgres'.
+                                             Default: 
+
+ --servicepassword <servicepassword>         Sets the password for the operating system user account that owns server process. Defaults to superuser password.
+                                             Default: 
+
+ --install_runtimes <install_runtimes>       Specifies whether or not install the Microsoft Visual C++ runtimes before the installation proceeds.
+                                             Default: 1
+
+ --enable_acledit <enable_acledit>           Check and give the read permissions on the complete data directory path for the service account.
+                                             Default: 0
+
+ --create_shortcuts <create_shortcuts>       Specifies whether or not menu shortcuts should be created.
+                                             Default: 1
+
+ --prefix <prefix>                           Installation Directory
+                                             Default: C:\Program Files\PostgreSQL\15
+
+ --datadir <datadir>                         Data Directory
+                                             Default: C:\Program Files\PostgreSQL\15\data
+
+ --superpassword <superpassword>             Password
+                                             Default: 
+
+ --serverport <serverport>                   Port
+                                             Default: 5432
+
+ --locale <locale>                           Locale
+                                             Default:
 ```
