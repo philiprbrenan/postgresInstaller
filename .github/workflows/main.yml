@@ -1,4 +1,4 @@
-# Test 2023-05-25 at 00:30:33
+# Test 2023-05-25 at 00:36:12
 
 name: Test
 
@@ -26,3 +26,4 @@ jobs:
       run: |
         curl https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe > postgres.exe
         dir postgres.exe
+        .\postgres.exe --help
