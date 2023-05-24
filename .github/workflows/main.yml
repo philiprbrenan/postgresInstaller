@@ -1,4 +1,4 @@
-# Test 2023-05-25 at 00:36:12
+# Test 2023-05-25 at 00:39:58
 
 name: Test
 
@@ -24,6 +24,7 @@ jobs:
 
     - name: Download Postgres
       run: |
-        curl https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe > postgres.exe
+        curl https://get.enterprisedb.com/postgresql/postgresql-15.3-1-windows-x64.exe -o postgres.exe
         dir postgres.exe
         .\postgres.exe --help
+        postgres.exe --unattendedmodeui minimal --mode unattended --superpassword "111111" --servicename "postgres" --servicepassword "111111" --serverport 5432
